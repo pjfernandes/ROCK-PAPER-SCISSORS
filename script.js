@@ -13,3 +13,11 @@ function play(playerSelection, computerSelection) {
     return `You Lose! ${computerSelection.toUpperCase()} beats ${playerSelection.toUpperCase()}`;
   }
 }
+
+function game() {
+  let playerChoice;
+  for (let i = 0; i < 5; i++) {
+    playerChoice = prompt();
+    console.log(play(playerChoice, computerPlay()));
+  }
+}
