@@ -16,10 +16,8 @@ function play(playerSelection, computerSelection) {
 
 function game() {
   let playerChoice;
-  //for (let i = 0; i < 5; i++) {
     playerChoice = prompt();
     return(play(playerChoice, computerPlay()));
-  //}
 }
 
 const btn = document.getElementById("player-selection");
@@ -27,5 +25,8 @@ const btn = document.getElementById("player-selection");
 btn.addEventListener("click", () =>{
   const results = document.querySelector(".results");
   results.innerHTML = "";
-  results.insertAdjacentHTML("beforeend",`<p>${game()}</p>`)
+  let points;
+  for (let i = 0; i < 5; i++) {
+    results.insertAdjacentHTML("beforeend",`<p>${game()}</p>`);
+  }
 });
